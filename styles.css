@@ -91,11 +91,32 @@ section > h2 {
 
 @media (max-width: 576px) {
     .advance-layout {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         grid-template-areas: 
         "box-1"
         "box-2"
         "box-3"
         "box-4";
     }
+}
+
+/* Grid Span */
+.grid-span {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+}
+
+.grid-span .box-1 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.grid-span .box-2 {
+    grid-column: span 2;
+}
+
+.grid-span .box {
+    background-color: rgba(0, 134, 76, 0.3);
 }
